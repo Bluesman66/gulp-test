@@ -37,7 +37,7 @@ gulp.task('serve', function () {
     });
 
     gulp.watch(config.path.less, ['less']);
-    gulp.watch(config.path.html).on('change', browserSync.reload);
+    gulp.watch(config.path.html, browserSync.reload);
 });
 
 gulp.task('default', ['less', 'serve']);
