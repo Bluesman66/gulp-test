@@ -22,6 +22,7 @@ gulp.task('less', function () {
         .pipe(sourcemaps.init())
         .pipe(less())
         .pipe(concat(config.output.cssName))
+        .pipe(autoprefixer())
         .pipe(cleanCss())
         .pipe(sourcemaps.write())
         .pipe(gulp.dest(config.output.path))
